@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ad Blocker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #292929; /* Dark background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      width: 400px; /* Adjust width as needed */
+      background-color: #383838; /* Purple background */
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+    h1 {
+      text-align: center;
+      color: #f0f0f0; /* Light gray */
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3); /* Glowing halo */
+    }
+    p {
+      text-align: center;
+      color: #c0c0c0; /* Lighter gray */
+      margin-top: 10px;
+    }
+    #status {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 30px;
+      color: #f0f0f0; /* Light gray */
+    }
+    #adsBlockedCount {
+      font-size: 16px;
+      text-align: center;
+      margin-top: 10px;
+      color: #f0f0f0; /* Light gray */
+    }
+    #toggleButton {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Glowing halo */
+    }
+    #toggleButton.disabled {
+      background-color: #4CAF50; /* Green */
+    }
+    #toggleButton.enabled {
+      background-color: #e53935; /* Red */
+    }
+    #toggleButton:hover {
+      opacity: 0.9;
+    }
+  </style>
+  <script src="popup.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>HyperBlocker V8</h1>
+    <p id="status">Content blocking is disabled.</p>
+    <p id="adsBlockedCount">Total Ads & Trackers Blocked: 0</p> <!-- New line -->
+    <button id="toggleButton" class="disabled">Enable Content Blocking</button>
+  </div>
+</body>
+</html>
