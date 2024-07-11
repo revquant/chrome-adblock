@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "HyperBlocker",
+    "version": "8",
+    "description": "A lightweight and undetectable content blocker designed to keep you safe from the most common ad and tracking networks.",
+    "permissions": [
+      "webRequest",
+      "webRequestBlocking",
+      "<all_urls>"
+    ],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      }
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+  
