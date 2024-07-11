@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ad Blocker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    p {
+      text-align: center;
+      color: #666;
+      margin-top: 10px;
+    }
+    #status {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 30px;
+    }
+    #toggleButton {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 20px auto 0;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #toggleButton.disabled {
+      background-color: #4CAF50; /* Green */
+    }
+    #toggleButton.enabled {
+      background-color: #e53935; /* Red */
+    }
+    #toggleButton:hover {
+      opacity: 0.9;
+    }
+  </style>
+  <script src="popup.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Ad Blocker</h1>
+    <p id="status">Ad blocking is disabled.</p>
+    <button id="toggleButton" class="disabled">Enable Ad Blocking</button>
+  </div>
+</body>
+</html>
