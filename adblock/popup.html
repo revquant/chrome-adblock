@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ad Blocker</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #222; /* Dark background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      width: 400px; /* Adjust width as needed */
+      background-color: #333; /* Darker background */
+      padding: 30px;
+      border-radius: 20px; /* Rounded corners */
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      border: 2px solid #00b4ff; /* Blue border */
+    }
+    h1 {
+      text-align: center;
+      color: #fff; /* White text */
+      font-size: 40px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 180, 255, 0.8); /* Glowing halo */
+    }
+    p {
+      text-align: center;
+      color: #ccc; /* Lighter gray */
+      margin-top: 10px;
+      font-size: 18px;
+    }
+    #status {
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 30px;
+    }
+    .enabled-text {
+      color: #4CAF50; /* Green */
+    }
+    .disabled-text {
+      color: #e53935; /* Red */
+    }
+    #adsBlockedCount {
+      font-size: 20px;
+      text-align: center;
+      margin-top: 10px;
+      color: #ccc; /* Light gray */
+    }
+    #toggleButton {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 180, 255, 0.8); /* Glowing halo */
+      background-color: #00b4ff; /* Blue background */
+    }
+    #toggleButton.disabled {
+      background-color: #4CAF50; /* Green */
+    }
+    #toggleButton.enabled {
+      background-color: #e53935; /* Red */
+    }
+    #toggleButton:hover {
+      opacity: 0.9;
+    }
+  </style>
+  <script src="popup.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>HyperBlocker V8</h1>
+    <p id="status">Content blocking is disabled.</p>
+    <p id="adsBlockedCount">Total Ads & Trackers Blocked: 0</p>
+    <button id="toggleButton" class="disabled">Enable Content Blocking</button>
+  </div>
+</body>
+</html>
